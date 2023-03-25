@@ -1,16 +1,17 @@
-text = str(input())
+text = input()
+
+letters = {
+    "a":1,
+    "e":2,
+    "i":3,
+    "o":4,
+    "u":5
+
+}
 sum = 0
 
-for i in range(0, len(text)):
-    if text[i] == "a":
-        sum += 1
-    if text[i] == "e":
-        sum += 2
-    if text[i] == "i":
-        sum += 3
-    if text[i] == "o":
-        sum += 4
-    if text[i] == "u":
-        sum += 5
-
-    print(sum)
+letters_check = ("a", "e", "i", "o", "u")
+for letter in text:
+    if letter in letters_check:
+        sum +=letters[letter]
+print(sum)
