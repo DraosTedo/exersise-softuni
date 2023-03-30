@@ -17,3 +17,4 @@ if left_sum == right_sum:
 else:
     diff = abs(left_sum - right_sum)
     print(f"No, diff = {diff}")
+n
