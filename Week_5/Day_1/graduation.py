@@ -14,7 +14,6 @@ while True:
             print(f"{student_name} has been excluded at {current_failed_years} grade")
             break
         continue
-
     year_counter += 1
     grade_counter += annual_grade
 
