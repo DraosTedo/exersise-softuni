@@ -1,16 +1,17 @@
-# This is a sample Python script.
+number_bitcoin = int(input())
+number_china_yan = float(input())
+commission = float(input())
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+one_bitcoin_price = 1168
+one_china_yan_price = 0.15
+usd_fixing = 1.76
+eur_fixing = 1.95
+fee = commission / 100
 
+total_bitcoin = number_bitcoin * 1168
+total_china_yan = (number_china_yan * one_china_yan_price) * usd_fixing
+result = (total_bitcoin + total_china_yan) / eur_fixing
+fee = result * fee
+result -= fee
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(f"{result:.2f}")
